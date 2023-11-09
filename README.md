@@ -1,2 +1,11 @@
 # Splunk Automation Tools
- Python scripts for Splunk
+ 
+Experimenting with SOC concepts using Python scripts.
+
+Index cleanup - Script to automatically delete old/cold indexes in Splunk.
+CSV exporter - Export Splunk search results or metrics to a CSV file.
+Alert script - Script that polls the Splunk API and generates alerts based on search results.
+Dashboard creator - Automatically create and update Splunk dashboards from a template.
+Lookup table generator - Script that generates lookup tables from external data sources.
+
+(Work in progress, report for any bugs)
