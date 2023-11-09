@@ -1,0 +1,34 @@
+import json
+
+cities = [
+    {
+        "name": "New York City",
+        "country": "US",
+        "population": 8336697,
+        "coordinates": {
+            "lat": 40.7128,
+            "lon": -74.0060
+        }
+    },
+    {
+        "name": "Los Angeles",
+        "country": "US",
+        "population": 3971883, 
+        "coordinates": {
+            "lat": 34.0522,
+            "lon": -118.2437 
+        }
+    },
+    {
+        "name": "Chicago",
+        "country": "US",
+        "population": 2695598,
+        "coordinates": {
+            "lat": 41.8781, 
+            "lon": -87.6298
+        }
+    }
+]
+
+with open('data/cities.json', 'w') as f:
+    json.dump(cities, f)

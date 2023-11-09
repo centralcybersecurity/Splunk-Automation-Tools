@@ -1,0 +1,18 @@
+import csv
+
+zips = [
+    ['10001', 'New York', 'NY'],
+    ['94101', 'San Francisco', 'CA'], 
+    ['60290', 'Chicago', 'IL'],
+    ['75001', 'Dallas', 'TX'],
+    ['90210', 'Beverly Hills', 'CA'],
+    ['33101', 'Miami', 'FL'],
+    ['80201', 'Denver', 'CO'],
+    ['97201', 'Portland', 'OR'],
+    ['30303', 'Atlanta', 'GA'],
+    ['11201', 'Brooklyn', 'NY']
+]
+
+with open('data/zips.csv', 'w') as f:
+    writer = csv.writer(f)
+    writer.writerows(zips)

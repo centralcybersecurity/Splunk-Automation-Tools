@@ -1,0 +1,18 @@
+import csv
+
+countries = [
+    ['US', 'United States'],
+    ['CA', 'Canada'],
+    ['MX', 'Mexico'],
+    ['DE', 'Germany'],
+    ['UK', 'United Kingdom'],
+    ['FR', 'France'],
+    ['JP', 'Japan'],
+    ['CN', 'China'],
+    ['BR', 'Brazil'],
+    ['IN', 'India']
+]
+
+with open('lookups/countries.csv', 'w') as f:
+    writer = csv.writer(f)
+    writer.writerows(countries)

@@ -1,0 +1,25 @@
+[views/systemLookupEditor]
+version = 7.3.0
+modtime = 1618884491.123
+
+[views/search]
+version = 7.3.0
+modtime = 1618884491.456
+
+[views/manager]
+version = 7.3.0  
+modtime = 1618884491.789
+
+[app/install]
+state_change_requires_restart = true
+installed_by_version = 7.3.0
+
+[app/package]
+check_for_updates = 1
+
+[app/ui]
+is_visible = 1
+label = My App
+
+[inputs/udp]
+disabled = 0

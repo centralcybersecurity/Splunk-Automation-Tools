@@ -1,0 +1,60 @@
+<form theme="dark">
+
+  <label>Advanced Sample Dashboard</label>
+
+  <fieldset submitButton="false">
+
+    <input type="time" token="time">
+      <label>Time Range</label>
+      <default>
+        <earliest>-24h@h</earliest>
+        <latest>now</latest>
+      </default>
+    </input>
+
+    <input type="multiselect" token="index" searchWhenChanged="true">
+      <label>Index</label>
+      <choice value="main">main</choice>  
+      <choice value="history">history</choice>
+      <default>main</default>
+      <search>
+        <query>| metadata type=indexes | table title</query>
+      </search>
+    </input>
+
+  </fieldset>
+
+  <row>
+    <panel>
+      <title>Alerts Overview</title>
+      <single>
+        <search base="alerts">
+          <query>| stats count by severity</query>
+        </search>
+        <drilldown>
+          <link target="_blank">search?q=$click.value$</link>
+        </drilldown>
+      </single>
+    </panel>
+
+    <panel>
+      <title>Key Metrics</title>
+      <table>
+        <title>Data Ingestion Rate</title>
+        <search base="main">
+          <query>| stats avg(kb) as "KB per event" by host</query>
+        </search>
+      </table>
+
+      <chart>
+        <title>Daily Volume</title> 
+        <search base="main">
+          <query>| timechart span=1d count</query>
+        </search>
+      </chart>
+
+    </panel>
+
+  </row>
+
+</form>
